@@ -40,11 +40,13 @@ INSTALLED_APPS = [
     #my apps
     'tickets',
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 REST_FRAMEWORK = {
+    #Basic - Token - Oauth
     'DEFAULT_AUTHENTICATION_CLASSES':
-     ['rest_framework.authentication.BasicAuthentication'],
+     ['rest_framework.authentication.TokenAuthentication'],
 
      # AllowAny - IsAuthenticated - IsAdminuser - IsAuthenticatedReadOnly
     'DEFAULT_PERMISSION_CLASSES':
